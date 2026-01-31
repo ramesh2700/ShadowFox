@@ -2,251 +2,347 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mumbai Indians | Fan Hub</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramesh | Portfolio</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
 
-body{
-    background:#f5f7ff;
-    color:#222;
-}
+        body {
+            background-color: #F9FAFB;
+            color: #1F2933;
+            line-height: 1.6;
+        }
 
-/* NAVBAR */
-nav{
-    background:#004ba0;
-    color:white;
-    padding:15px 5%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 60px;
+            height: 80px;
+            background-color: #6C63FF;
+        }
 
-nav h2{
-    font-size:22px;
-}
+        nav .left {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: white;
+        }
 
-nav ul{
-    display:flex;
-    list-style:none;
-}
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
 
-nav ul li{
-    margin-left:20px;
-}
+        nav ul li {
+            margin: 0 18px;
+        }
 
-nav ul li a{
-    color:white;
-    text-decoration:none;
-    font-size:17px;
-}
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
 
-nav ul li a:hover{
-    text-decoration:underline;
-}
+        nav ul li a:hover {
+            color: #D1D5FF;
+        }
 
-.hero{
-    background:lightblue            ;   
+       
+        .firstsection {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 100px 60px;
+        }
 
-    min-height:100vh;
+        .leftsection {
+            width: 50%;
+        }
 
-    color:#004ba0;
-    text-align:center;
+        .leftsection h2 {
+            font-size: 1.5rem;
+            color: #4B5563;
+        }
 
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-}
+        .leftsection h1 {
+            font-size: 3rem;
+            margin: 10px 0;
+        }
 
-.hero h1{
-    font-size:3rem;
-}
+        .role {
+            font-size: 1.1rem;
+            margin: 15px 0;
+            color: #374151;
+            max-width: 520px;
+        }
 
-.hero p{
-    margin-top:15px;
-    font-size:1.2rem;
-}
+        .interest {
+            margin-top: 10px;
+            font-size: 1.1rem;
+        }
 
-/* SECTIONS */
-section{
-    padding:60px 40px;
-}
+        #element {
+            color: #6C63FF;
+            font-weight: bold;
+        }
 
-section h2{
-    text-align:center;
-    margin-bottom:30px;
-    color:#004ba0;
-}
+        .buttons {
+            margin-top: 30px;
+        }
 
+        .btn {
+            padding: 12px 20px;
+            margin-right: 15px;
+            background-color: #6C63FF;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
 
-.players{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:20px;
-}
+        .btn:hover {
+            background-color: #554ee2;
+        }
 
-.player-card{
-    background:white;
-    padding:15px;
-    text-align:center;
-    border-radius:10px;
-    box-shadow:0 3px 8px rgba(0,0,0,0.1);
-}
+        
+        .rightsection {
+            width: 45%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-.player-card img{
-    width:100%;
-    border-radius:8px;
-}
+        .profile-img {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 6px solid #6C63FF;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
 
-.player-card h3{
-    margin:10px 0;
-}
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
+        .section {
+            max-width: 80vw;
+            margin: auto;
+            padding: 80px 0;
+        }
 
-.matches{
-    max-width:600px;
-    margin:auto;
-}
+        .section h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
 
-.match{
-    background:white;
-    padding:15px;
-    margin:10px 0;
-    border-radius:8px;
-    box-shadow:0 2px 6px rgba(0,0,0,0.1);
-}
+        .textgray {
+            color: gray;
+        }
 
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
 
-.poll{
-    text-align:center;
-    margin-top:40px;
-}
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s;
+        }
 
-.poll button{
-    padding:10px 15px;
-    margin:10px;
-    background:#004ba0;
-    color:white;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
-}
+        .card:hover {
+            transform: translateY(-6px);
+        }
 
-.poll button:hover{
-    background:#003366;
-}
+        .card h3 {
+            color: #6C63FF;
+            margin-bottom: 10px;
+        }
 
+        .card p {
+            font-size: 0.95rem;
+            color: #444;
+        }
 
-footer{
-    background:#004ba0;
-    color:white;
-    text-align:center;
-    padding:20px;
-    margin-top:40px;
-}
+        footer {
+            background-color: #1F2933;
+            color: white;
+            padding: 40px 0;
+            margin-top: 80px;
+        }
 
-@media(max-width:768px){
+        .footer-rights {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #9CA3AF;
+        }
 
-    nav{
-        flex-direction:column;
-    }
+        @media (max-width: 768px) {
+            nav {
+                padding: 0 30px;
+            }
 
-    nav ul{
-        margin-top:10px;
-    }
+            .firstsection {
+                flex-direction: column;
+                text-align: center;
+            }
 
-    .hero h1{
-        font-size:2.2rem;
-    }
-}
-</style>
+            .leftsection,
+            .rightsection {
+                width: 100%;
+            }
+
+            .buttons .btn {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<nav>
-    <h2>Mumbai Indians</h2>
+    
+    <header>
+        <nav>
+            <div class="left">Ramesh Portfolio</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#players">Players</a></li>
-        <li><a href="#matches">Matches</a></li>
-        <li><a href="#fans">Fan Poll</a></li>
-    </ul>
-</nav>
+    <main>
 
-<div class="hero" id="home">
-    <h1>Welcome to Mumbai Indians </h1>
-    <p>One Family 💙 One Team 💙 One Dream</p>
-</div>
+        
+        <section class="firstsection">
+            <div class="leftsection">
+                <h2>Hello, I’m</h2>
+                <h1>Ramesh </h1>
 
+                <p class="role">
+                    An aspiring web developer with a strong foundation in HTML, CSS,
+                    and programming fundamentals, focused on building responsive
+                    and user-friendly web interfaces.
+                </p>
 
-<section id="players">
+                <p class="interest">
+                    Focused on strengthening my expertise in <span id="element"></span>
+                </p>
 
-<h2>Squad - Mumbai Indians </h2>
+                <div class="buttons">
+                    <button class="btn">Download Resume</button></a>
+                    <button class="btn">View Projects</button></a>
+                </div>
+            </div>
 
-<div class="players">
+            <div class="rightsection">
+                <div class="profile-img">
+                    <img src="_SKT0726.JPG.jpeg" alt="Ramesh Admane">
+                </div>
+            </div>
+        </section>
 
-<div class="player-card"><img src="rohit.png"><h3>Rohit Sharma</h3><p>Batsman</p></div>
-<div class="player-card"><img src="hardik.png"><h3>Hardik Pandya</h3><p>All-Rounder</p></div>
-<div class="player-card"><img src="bumrah.png"><h3>Jasprit Bumrah</h3><p>Bowler</p></div>
+        
+        <section class="section" id="skills">
+            <span class="textgray">What I have learned so far</span>
+            <h1>Skills</h1>
 
-</div>
-</section>
+            <div class="grid">
+                <div class="card">
+                    <h3>C Programming</h3>
+                    <p>Strong understanding of core programming concepts and problem-solving.</p>
+                </div>
 
-<!-- MATCHES -->
-<section id="matches">
+                <div class="card">
+                    <h3>Python</h3>
+                    <p>Familiar with Python basics, data structures, and scripting.</p>
+                </div>
 
-<h2>Match Schedule</h2>
+                <div class="card">
+                    <h3>HTML5</h3>
+                    <p>Experience in creating semantic and accessible web pages.</p>
+                </div>
 
-<div class="matches">
-    <div class="match">MI vs CSK – 25 March</div>
-    <div class="match">MI vs RCB – 29 March</div>
-    <div class="match">MI vs KKR – 2 April</div>
-    <div class="match">MI vs SRH – 6 April</div>
-</div>
+                <div class="card">
+                    <h3>CSS3</h3>
+                    <p>Skilled in Flexbox, Grid, and responsive UI design.</p>
+                </div>
+            </div>
+        </section>
 
-</section>
+        
+        <section class="section" id="projects">
+            <span class="textgray">Academic & Personal Work</span>
+            <h1>Projects</h1>
 
-<section id="fans">
+            <div class="grid">
+                <div class="card">
+                    <h3>Clone Website</h3>
+                    <p>
+                        Designed a clone website of amazon,flipkart using HTML and CSS
+                    </p>
+                </div>
 
-<h2>Fan Poll</h2>
+                <div class="card">
+                    <h3>Basic Calculator</h3>
+                    <p>
+                        Created a simple calculator using HTML, CSS, and JavaScript
+                        for basic arithmetic operations.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-<div class="poll">
+        
+        <section class="section" id="contact">
+            <span class="textgray">Get in Touch</span>
+            <h1>Contact</h1>
 
-<p>Who will win today?</p>
+            <p>Email: admaneramesh31@email.com</p>
+            
+        </section>
 
-<button onclick="vote('Mumbai Indians')">Mumbai Indians</button>
-<button onclick="vote('Opponent')">Opponent</button>
+    </main>
 
-<p id="result"></p>
+    
+    <footer>
+        <div class="footer-rights">
+            © 2026 Ramesh Portfolio | All Rights Reserved
+        </div>
+    </footer>
 
-</div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-© 2026 Mumbai Indians  Website | Project
-</footer>
-
-<!-- SCRIPT -->
-<script>
-function vote(team){
-    document.getElementById("result").innerText =
-    "You voted for " + team + "!";
-}
-</script>
+    
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        new Typed('#element', {
+            strings: [
+                'Front-End Development',
+                'Responsive Web Design',
+                'Modern UI Design'
+            ],
+            typeSpeed: 60,
+            loop: true
+        });
+    </script>
 
 </body>
 </html>
