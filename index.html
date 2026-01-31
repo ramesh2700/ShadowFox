@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mumbai Indians | Fan Hub</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f5f7ff;
+    color:#222;
+}
+
+/* NAVBAR */
+nav{
+    background:#004ba0;
+    color:white;
+    padding:15px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav h2{
+    font-size:22px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+}
+
+nav ul li a:hover{
+    text-decoration:underline;
+}
+
+.hero{
+    background:lightblue            ;   
+
+    min-height:100vh;
+
+    color:#004ba0;
+    text-align:center;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero h1{
+    font-size:3rem;
+}
+
+.hero p{
+    margin-top:15px;
+    font-size:1.2rem;
+}
+
+/* SECTIONS */
+section{
+    padding:60px 40px;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#004ba0;
+}
+
+
+.players{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.player-card{
+    background:white;
+    padding:15px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 3px 8px rgba(0,0,0,0.1);
+}
+
+.player-card img{
+    width:100%;
+    border-radius:8px;
+}
+
+.player-card h3{
+    margin:10px 0;
+}
+
+
+.matches{
+    max-width:600px;
+    margin:auto;
+}
+
+.match{
+    background:white;
+    padding:15px;
+    margin:10px 0;
+    border-radius:8px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+
+.poll{
+    text-align:center;
+    margin-top:40px;
+}
+
+.poll button{
+    padding:10px 15px;
+    margin:10px;
+    background:#004ba0;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.poll button:hover{
+    background:#003366;
+}
+
+
+footer{
+    background:#004ba0;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+    }
+
+    nav ul{
+        margin-top:10px;
+    }
+
+    .hero h1{
+        font-size:2.2rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>Mumbai Indians</h2>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#players">Players</a></li>
+        <li><a href="#matches">Matches</a></li>
+        <li><a href="#fans">Fan Poll</a></li>
+    </ul>
+</nav>
+
+<div class="hero" id="home">
+    <h1>Welcome to Mumbai Indians </h1>
+    <p>One Family 💙 One Team 💙 One Dream</p>
+</div>
+
+
+<section id="players">
+
+<h2>Squad - Mumbai Indians </h2>
+
+<div class="players">
+
+<div class="player-card"><img src="rohit.png"><h3>Rohit Sharma</h3><p>Batsman</p></div>
+<div class="player-card"><img src="hardik.png"><h3>Hardik Pandya</h3><p>All-Rounder</p></div>
+<div class="player-card"><img src="bumrah.png"><h3>Jasprit Bumrah</h3><p>Bowler</p></div>
+
+</div>
+</section>
+
+<!-- MATCHES -->
+<section id="matches">
+
+<h2>Match Schedule</h2>
+
+<div class="matches">
+    <div class="match">MI vs CSK – 25 March</div>
+    <div class="match">MI vs RCB – 29 March</div>
+    <div class="match">MI vs KKR – 2 April</div>
+    <div class="match">MI vs SRH – 6 April</div>
+</div>
+
+</section>
+
+<section id="fans">
+
+<h2>Fan Poll</h2>
+
+<div class="poll">
+
+<p>Who will win today?</p>
+
+<button onclick="vote('Mumbai Indians')">Mumbai Indians</button>
+<button onclick="vote('Opponent')">Opponent</button>
+
+<p id="result"></p>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+© 2026 Mumbai Indians  Website | Project
+</footer>
+
+<!-- SCRIPT -->
+<script>
+function vote(team){
+    document.getElementById("result").innerText =
+    "You voted for " + team + "!";
+}
+</script>
+
+</body>
+</html>
